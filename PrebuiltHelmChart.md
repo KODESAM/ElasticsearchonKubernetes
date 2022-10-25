@@ -3,13 +3,14 @@ Create PV
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: data-elasticsearch-master-0
+  name: pv-master-0
 spec:
   capacity:
-    storage: 8Gi
-  volumeMode: Filesystem
+    storage: 30Gi
   accessModes:
     - ReadWriteOnce
+  hostPath:
+      path: /pv/data-analytics
 ```
 ### How to Deploy Elasticsearch with Seven Pods Using a Prebuilt Helm Chart ###
 
