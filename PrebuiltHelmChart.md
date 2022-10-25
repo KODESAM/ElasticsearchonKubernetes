@@ -1,3 +1,16 @@
+Create PV
+```
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data-elasticsearch-master-0
+spec:
+  capacity:
+    storage: 8Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+```
 ### How to Deploy Elasticsearch with Seven Pods Using a Prebuilt Helm Chart ###
 
 Step 1: Add the Bitnami Repository and Deploy the Elasticsearch Chart
