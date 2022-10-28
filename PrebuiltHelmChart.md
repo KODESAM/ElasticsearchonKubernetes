@@ -12,6 +12,22 @@ spec:
   hostPath:
       path: /pv/data-analytics
 ```
+```
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-master-0
+spec:
+  capacity:
+    storage: 100M
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: standard
+  hostPath:
+      path: /Users/aamirsyed/WorkS/Elastic/data
+  ```
 ### How to Deploy Elasticsearch with Seven Pods Using a Prebuilt Helm Chart ###
 
 Step 1: Add the Bitnami Repository and Deploy the Elasticsearch Chart
